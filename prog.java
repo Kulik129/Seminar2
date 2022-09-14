@@ -4,8 +4,24 @@ public class prog {
         kalkulyalor(); //1 шаг. Открытие калькулятора
     }
 
-    static void yes_no(){
+    static void open_k(){
         kalkulyalor();
+    }
+
+    static void yes_no(){
+        Scanner iScanner1 = new Scanner(System.in);
+            System.out.println("Введите 1 если хотите продолжить!\nВведите 2 если хотите остановить!");
+            String message = iScanner1.next();
+            switch (message) {
+                case "да":
+                open_k();
+                    break;
+                case "нет":
+                System.out.println("ПОКА-ПОКА!!");
+                System. exit(0);
+                    break;
+            }
+            iScanner1.close();
     }
 
     static void  kalkulyalor(){
@@ -20,54 +36,22 @@ public class prog {
         switch(operation){
             case "+":
             System.out.println(number1+number2);
-            Scanner iScanner1 = new Scanner(System.in);
-            System.out.println("Введите 1 если хотите продолжить!\nВведите 2 если хотите остановить!");
-            Integer message_sum = iScanner.nextInt();
-            if (message_sum == 1) {
-                yes_no();
-            } else if (message_sum == 2) {
-                System.out.println("bay");
-            }
-            iScanner1.close();
+            yes_no();
                 break;
 
             case "*":
             System.out.println(number1*number2);
-            Scanner iScanner3 = new Scanner(System.in);
-            System.out.println("Введите 1 если хотите продолжить!\nВведите 2 если хотите остановить!");
-            Integer message_mult = iScanner.nextInt();
-            if (message_mult == 1) {
-                yes_no();
-            } else if (message_mult == 2) {
-                System.out.println("bay");
-            }
-            iScanner3.close();
+            yes_no();
                 break;
 
             case "/":
             System.out.println(number1/number2);
-            Scanner iScanner4 = new Scanner(System.in);
-            System.out.println("Введите 1 если хотите продолжить!\nВведите 2 если хотите остановить!");
-            Integer message_div = iScanner.nextInt();
-            if (message_div == 1) {
-                yes_no();
-            } else if (message_div == 2) {
-                System.out.println("bay");
-            }
-            iScanner4.close();
+            yes_no();
                 break;
 
             case "-":
             System.out.println(number1-number2);
-            Scanner iScanner5 = new Scanner(System.in);
-            System.out.println("Введите 1 если хотите продолжить!\nВведите 2 если хотите остановить!");
-            Integer message_sub = iScanner.nextInt();
-            if (message_sub == 1) {
-                yes_no();
-            } else if (message_sub == 2) {
-                System.out.println("bay");
-            }
-            iScanner5.close();
+            yes_no();
                 break;
             
             
