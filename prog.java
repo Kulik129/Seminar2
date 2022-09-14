@@ -4,24 +4,20 @@ public class prog {
         kalkulyalor(); //1 шаг. Открытие калькулятора
     }
 
-    static void open_k(){
-        kalkulyalor();
-    }
-
     static void yes_no(){
         Scanner iScanner1 = new Scanner(System.in);
-            System.out.println("Введите 1 если хотите продолжить!\nВведите 2 если хотите остановить!");
-            String message = iScanner1.next();
-            switch (message) {
-                case "да":
-                open_k();
-                    break;
-                case "нет":
-                System.out.println("ПОКА-ПОКА!!");
-                System. exit(0);
-                    break;
-            }
-            iScanner1.close();
+        System.out.println("Введите ДА если хотите продолжить!\nВведите НЕТ если хотите остановить!");
+        String message = iScanner1.next();
+        switch (message.toLowerCase()) {
+            case "да":
+            kalkulyalor();
+                break;
+            case "нет":
+            System.out.println("ПОКА-ПОКА!!");
+            System. exit(0);
+                break;
+        }
+        iScanner1.close();
     }
 
     static void  kalkulyalor(){
@@ -32,7 +28,6 @@ public class prog {
         int number2 = iScanner.nextInt();
         System.out.print("Введите операцию ");
         String operation = iScanner.next();
-        // iScanner.close(); Выходит ошибка Exception in thread "main" java.lang.IllegalStateException: Scanner closed 
         switch(operation){
             case "+":
             System.out.println(number1+number2);
@@ -53,9 +48,7 @@ public class prog {
             System.out.println(number1-number2);
             yes_no();
                 break;
-            
-            
         }
-        // iScanner.close(); Выходит ошибка Exception in thread "main" java.lang.IllegalStateException: Scanner closed 
+        iScanner.close();
     }
 }
